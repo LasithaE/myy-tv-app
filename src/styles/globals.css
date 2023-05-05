@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 html {
-    background-color: #001F54;
-    color: #FEFCFB ;
-  }
-  body {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    background-color: #001F54;
-    color: #FEFCFB;
-  }
-  
+  background-color: #001f54;
+  color: #fefcfb;
+}
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #001f54;
+  color: #fefcfb;
+}
