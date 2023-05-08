@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Box } from "@mui/material";
 import {useRouter} from "next/router";
-import CarouselCard from "./ShowCarouselCard";
+import ShowCarouselCard from "./ShowCarouselCard";
 import {
   faChevronCircleLeft,
   faChevronCircleRight,
@@ -31,9 +31,9 @@ export default function ShowCarouselComponent({cards}) {
     },
   };
 
-  const product = cards.map((item) => (
+  const shows = cards.map((item) => (
    
-      <CarouselCard
+      <ShowCarouselCard
       key={item.id}
         onClick={()=>handleClick(item.id)}
         title={item.name}
@@ -64,7 +64,7 @@ export default function ShowCarouselComponent({cards}) {
           />
         }
       >
-        {product}
+        {shows}
       </Carousel>
     </Box>
   );

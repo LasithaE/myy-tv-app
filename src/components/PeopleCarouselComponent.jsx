@@ -3,7 +3,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Box } from "@mui/material";
 import {useRouter} from "next/router";
-import CarouselCard from "./ShowCarouselCard";
+import PeopleCarouselCard from "./PeopleCarouselCard";
+import ShowCarouselCard from "./ShowCarouselCard";
 import {
   faChevronCircleLeft,
   faChevronCircleRight,
@@ -15,7 +16,6 @@ export default function PeopleCarouselComponent({cards}) {
   const handleClick = (id) => {
     router.push(`/people/${id}`)
   }
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -31,12 +31,14 @@ export default function PeopleCarouselComponent({cards}) {
     },
   };
 
-  const product = cards.map((item) => (
+  const people = cards.map((item) => (
    
-      <CarouselCard
+      <PeopleCarouselCard
       key={item.id}
-      title={item.name}
         onClick={()=>handleClick(item.id)}
+        title={item.name}
+        image={item?.image?.original}
+        
        
       />
   ));
@@ -62,7 +64,7 @@ export default function PeopleCarouselComponent({cards}) {
           />
         }
       >
-        {product}
+        {people}
       </Carousel>
     </Box>
   );

@@ -1,5 +1,5 @@
 import { fetchShowDetails } from "@/redux/slices/show/showDetailsSlice";
-import { Box, Card, CardContent, Typography, CardMedia } from "@mui/material";
+import { Box, Card, Typography, CardMedia } from "@mui/material";
 import { Genres } from "@/components/Genres";
 import Rating from "../../components/Rating";
 import { useEffect } from "react";
