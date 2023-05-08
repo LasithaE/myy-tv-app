@@ -8,19 +8,15 @@ function NavBar() {
   return (
     <Box className="">
       <Box className="hidden md:block pb-[30px] pt-[30px] fixed w-full max-h-[80px]  bg-bgDarkBlue z-10">
-        <Box className="text-3xl font-extrabold float-left pl-8">Myy TV</Box>
+        <Link href="/" className="text-3xl font-extrabold float-left pl-8">
+          Myy TV
+        </Link>
         <Box className="text-textColor mb-[20px] float-right">
           <Link href="/" smooth={true} className="mr-6 mt-9 font-semibold">
             Shows
           </Link>
           <Link href="/people" className="mr-6 mt-9 font-semibold">
             People
-          </Link>
-          <Link href="/networks" className="mr-6 mt-9 font-semibold">
-            Networks
-          </Link>
-          <Link href="/webchannels" className="mr-6 mt-9 font-semibold">
-            Web Channels
           </Link>
         </Box>
       </Box>
@@ -45,28 +41,18 @@ function NavBar() {
                 >
                   People
                 </Link>
-                <Link
-                  href="/networks"
-                  className="mr-8 p-2 mt-9 font-semibold hover:bg-lightBlue hover:border-transparent hover: rounded-md"
-                >
-                  Networks
-                </Link>
-
-                <Link
-                  href="/webchannels"
-                  className="mr-8 p-2 mt-9 font-semibold hover:bg-lightBlue hover:border-transparent hover: rounded-md"
-                >
-                  Web Channels
-                </Link>
               </Box>
             </Box>
           </>
         ) : (
           <nav>
             <Box className="flex bg-bgDarkBlue fixed w-full z-10 max-h-[80px] md:hidden justify-between">
-              <Box className="float-left text-2xl font-bold pt-4 pl-6">
+              <Link
+                href="/"
+                className="float-left text-2xl font-bold pt-4 pl-8"
+              >
                 Myy TV
-              </Box>
+              </Link>
               <FontAwesomeIcon
                 icon={faBars}
                 size="xl"
