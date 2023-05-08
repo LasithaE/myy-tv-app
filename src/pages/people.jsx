@@ -1,6 +1,6 @@
 import React from "react";
-import CarouselComponent from "../components/CarouselComponent";
-function Shows() {
+import { Box } from "@mui/material";
+export default function People() {
     const cards = [
         { title: "Card 1", image: "/assets/sample.png" },
         { title: "Card 2", image: "/assets/sample.png" },
@@ -15,10 +15,9 @@ function Shows() {
         { title: "Card 11", image: "/assets/sample.png" },
       ];
   return (
-    <div className="pt-[100px]">
-        <div className="text-2xl pl-8 font-extrabold">Shows</div>
-        <CarouselComponent cards={cards} />
-    </div>
+    <Box className="pt-[100px]">
+        <Box className="text-2xl pl-8 font-extrabold">People</Box>
+       hi
+    </Box>
   );
 }
-export default Shows

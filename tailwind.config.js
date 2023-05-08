@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         bgDarkBlue: "#001F54",
         textColor: "#FEFCFB",
+        lightBlue:"#1282A2"
       },
     },
   },
