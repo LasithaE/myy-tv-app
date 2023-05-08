@@ -5,7 +5,6 @@ import { Box } from "@mui/material";
 import React, { useState } from "react";
 function NavBar() {
   const [openNav, setOpenNav] = useState(false);
-  console.log(openNav);
   return (
     <Box className="">
       <Box className="hidden md:block pb-[30px] pt-[30px] fixed w-full max-h-[80px]  bg-bgDarkBlue z-10">

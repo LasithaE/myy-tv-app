@@ -10,10 +10,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function ShowCarouselComponent({cards}) {
+export default function PeopleCarouselComponent({cards}) {
   const router = useRouter()
   const handleClick = (id) => {
-    router.push(`/shows/${id}`)
+    router.push(`/people/${id}`)
   }
 
   const responsive = {
@@ -35,11 +35,9 @@ export default function ShowCarouselComponent({cards}) {
    
       <CarouselCard
       key={item.id}
+      title={item.name}
         onClick={()=>handleClick(item.id)}
-        title={item.name}
-        genres={item.genres.slice(0, 3)}
-        image={item.image.original}
-        rating={item.rating.average}
+       
       />
   ));
 
