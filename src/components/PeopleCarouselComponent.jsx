@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Box } from "@mui/material";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import PeopleCarouselCard from "./PeopleCarouselCard";
 import ShowCarouselCard from "./ShowCarouselCard";
 import {
@@ -11,11 +11,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function PeopleCarouselComponent({cards}) {
-  const router = useRouter()
+export default function PeopleCarouselComponent({ cards }) {
+  const router = useRouter();
   const handleClick = (id) => {
-    router.push(`/people/${id}`)
-  }
+    router.push(`/people/${id}`);
+  };
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -23,28 +23,29 @@ export default function PeopleCarouselComponent({cards}) {
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 510 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 768, min: 0 },
+      breakpoint: { max: 510, min: 0 },
       items: 1,
     },
   };
 
   const people = cards.map((item) => (
-   
-      <PeopleCarouselCard
+    <PeopleCarouselCard
       key={item.id}
-        onClick={()=>handleClick(item.id)}
-        title={item.name}
-        image={item?.image?.original}
-        
-       
-      />
+      onClick={() => handleClick(item.id)}
+      title={item.name}
+      image={item?.image?.original}
+    />
   ));
 
   return (
-    <Box className="px-[20%]">
+    <Box className="px-[20%] md:px-[10%]">
       <Carousel
         responsive={responsive}
         customLeftArrow={
@@ -69,4 +70,3 @@ export default function PeopleCarouselComponent({cards}) {
     </Box>
   );
 }
-

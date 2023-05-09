@@ -17,11 +17,9 @@ export default function FeaturedShows() {
     <Box className="pt-[150px]">
       <Box className="flex">
         <Link href="/shows">
-          <Box className="text-xl pb-10 pl-12 pr-4 font-extrabold">Shows</Box>
-        </Link>
-        <FaChevronRight className="mt-2 mr-4" />
-        <Link href="/shows/featured">
-          <Box className="text-xl pb-10 font-extrabold">Featured</Box>
+          <Box className="text-xl pb-10 pl-12 pr-4 font-extrabold">
+            Featured Shows
+          </Box>
         </Link>
       </Box>
       <ShowCarouselComponent cards={featuredShows} />

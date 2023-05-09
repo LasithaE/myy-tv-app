@@ -4,10 +4,12 @@
 html {
   background-color: #001f54;
   color: #fefcfb;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: #001f54;
   color: #fefcfb;
+  -webkit-tap-highlight-color: transparent;
 }

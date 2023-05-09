@@ -22,7 +22,7 @@ export default function ShowDetails() {
           <Typography
             gutterBottom
             variant="h4"
-            sx={{ fontWeight: "bold", height: 40,mb:10 }}
+            sx={{ fontWeight: "bold", height: 40, mb: 10 }}
             color="white"
             component="div"
           >
@@ -31,7 +31,7 @@ export default function ShowDetails() {
         </Box>
         <Card
           sx={{
-            mt:10,
+            mt: 10,
             margin: 1,
             maxWidth: 300,
             color: "transparent",

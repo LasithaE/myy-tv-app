@@ -4,10 +4,8 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
-
 export default function PeopleCarouselCard({ title, image, onClick }) {
-    return (
-
+  return (
     <Card
       onClick={onClick}
       sx={{
@@ -18,7 +16,11 @@ export default function PeopleCarouselCard({ title, image, onClick }) {
         backdropFilter: "blur(7px)",
       }}
     >
-      <CardMedia sx={{ height: 400 }} image={image||'public/assets/sample.png'} title={title} />
+      <CardMedia
+        sx={{ height: 400 }}
+        image={image || "public/assets/sample.png"}
+        title={title}
+      />
       <CardContent>
         <Typography
           gutterBottom
