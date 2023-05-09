@@ -1,11 +1,9 @@
-import { render, fireEvent, waitFor } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import Home from "../src/pages/index";
 import { store } from "@/redux/store";
-import { fetchShowDetails } from "@/redux/slices/show/showDetailsSlice";
 import { Provider } from "react-redux";
 import AllShows from "@/pages/shows/all";
-import ShowDetails from "@/pages/shows/[id]";
-import {useRouter} from "next/router"
+
 jest.mock("next/router");
 
 describe("Home", () => {
