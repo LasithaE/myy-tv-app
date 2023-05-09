@@ -126,7 +126,7 @@ export default function ShowDetails() {
                 </Typography>
               </Box>
             )}
-            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Box sx={{ display: "flex", flexDirection: "row" }}>
               <Typography
                 gutterBottom
                 variant="h8"

@@ -15,8 +15,12 @@ export default function AllShows() {
   return (
     <Box className="pt-[150px]">
       <Box className="flex">
+        <Link href="/shows">
+          <Box className="text-xl pb-10 pl-12 pr-4 font-extrabold">Shows</Box>
+        </Link>
+        <FaChevronRight className="mt-2 mr-4" />
         <Link href="/shows/all">
-          <Box className="text-xl pb-10 pl-12 pr-4 font-extrabold">All Shows</Box>
+          <Box className="text-xl pb-10 font-extrabold">All Shows</Box>
         </Link>
       </Box>
       <ShowCarouselComponent cards={allShows} />
