@@ -14,7 +14,7 @@ export const fetchPeopleDetails = createAsyncThunk(
     try {
       const response = await axios.get(
         `https://api.tvmaze.com/people/${personId}`
-      ); 
+      );
       return response.data;
     } catch (error) {
       throw Error(error.message);
