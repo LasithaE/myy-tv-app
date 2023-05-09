@@ -1,22 +1,27 @@
-import { fetchShowDetails } from "@/redux/slices/show/showDetailsSlice";
+import { fetchShowDetails } from "../../redux/slices/show/showDetailsSlice";
 import { Box, Card, Typography, CardMedia } from "@mui/material";
-import { Genres } from "@/components/Genres";
+import { Genres } from "../../components/Genres";
 import Rating from "../../components/Rating";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 export default function ShowDetails() {
   const router = useRouter();
   const dispatch = useDispatch();
   const showDetails = useSelector((state) => state.showDetails.showDetails);
-  const { id } = router.query;
+
+    const { id } = router.query;
+
 
   useEffect(() => {
     dispatch(fetchShowDetails({ id }));
   }, []);
 
   return (
-    <Box className="flex items-center pt-[100px] justify-center">
+    <Box
+      data-testid="show-details"
+      className="flex items-center pt-[100px] justify-center"
+    >
       <Box sx={{ m: 4, width: 300 }}>
         <Box sx={{ display: "flex", ml: 1, flexDirection: "row" }}>
           <Typography

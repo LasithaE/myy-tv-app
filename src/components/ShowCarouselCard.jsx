@@ -7,16 +7,10 @@ import Typography from "@mui/material/Typography";
 import Rating from "./Rating";
 import { Genres } from "./Genres";
 
-export default function ShowCarouselCard({
-  title,
-  genres,
-  image,
-  rating,
-  onClick,
-}) {
+export default function ShowCarouselCard({ title, genres, image, rating }) {
   return (
     <Card
-      onClick={onClick}
+      data-testid="show-card"
       sx={{
         margin: 1,
         maxWidth: 300,

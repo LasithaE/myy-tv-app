@@ -1,9 +1,8 @@
 import { Box } from "@mui/material";
 import { useEffect } from "react";
-import { FaChevronRight } from "react-icons/fa";
-import { fetchShows } from "@/redux/slices/show/showsSlice";
+import { fetchShows } from "../../redux/slices/show/showsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import ShowCarouselComponent from "@/components/ShowCarouselComponent";
+import ShowCarouselComponent from "../../components/ShowCarouselComponent";
 import Link from "next/link";
 export default function FeaturedShows() {
   const dispatch = useDispatch();
@@ -16,7 +15,7 @@ export default function FeaturedShows() {
   return (
     <Box className="pt-[150px]">
       <Box className="flex">
-        <Link href="/shows">
+        <Link href="/shows/featured">
           <Box className="text-xl pb-10 pl-12 pr-4 font-extrabold">
             Featured Shows
           </Box>

@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Box } from "@mui/material";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import ShowCarouselCard from "./ShowCarouselCard";
 import {
   faChevronCircleLeft,
@@ -11,10 +11,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ShowCarouselComponent({ cards }) {
-  const router = useRouter();
-  const handleClick = (id) => {
-    router.push(`/shows/${id}`);
-  };
 
   const responsive = {
     superLargeDesktop: {
@@ -36,19 +32,22 @@ export default function ShowCarouselComponent({ cards }) {
   };
 
   const shows = cards.map((item) => (
+    <Link  href={`/shows/${item.id}`} key={item.id}>
     <ShowCarouselCard
+    
+
       key={item.id}
-      onClick={() => handleClick(item.id)}
       title={item.name}
       genres={item.genres.slice(0, 3)}
       image={item.image.original}
       rating={item.rating.average}
-    />
+    /></Link>
   ));
 
   return (
-    <Box className="px-[20%] md:px-[10%]">
-      <Carousel
+    <Box className="px-[20%] md:px-[10%]"
+    data-testid="shows-carousel">
+      <Carousel 
         responsive={responsive}
         customLeftArrow={
           <FontAwesomeIcon
@@ -58,6 +57,7 @@ export default function ShowCarouselComponent({ cards }) {
             className="absolute top-1/2 left-4 max-w-4 cursor-pointer text-primary-400"
           />
         }
+        data-testid="shows-list"
         customRightArrow={
           <FontAwesomeIcon
             icon={faChevronCircleRight}

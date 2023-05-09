@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-function NavBar() {
+export default function NavBar() {
   const [openNav, setOpenNav] = useState(false);
   return (
     <Box className="">
@@ -67,4 +67,4 @@ function NavBar() {
     </Box>
   );
 }
-export default NavBar;
+

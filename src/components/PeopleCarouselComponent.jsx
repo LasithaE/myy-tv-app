@@ -2,9 +2,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Box } from "@mui/material";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import PeopleCarouselCard from "./PeopleCarouselCard";
-import ShowCarouselCard from "./ShowCarouselCard";
 import {
   faChevronCircleLeft,
   faChevronCircleRight,
@@ -12,10 +11,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function PeopleCarouselComponent({ cards }) {
-  const router = useRouter();
-  const handleClick = (id) => {
-    router.push(`/people/${id}`);
-  };
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -36,12 +31,13 @@ export default function PeopleCarouselComponent({ cards }) {
   };
 
   const people = cards.map((item) => (
+    <Link href={`/shows/${item.id}`} key={item.id}>
     <PeopleCarouselCard
       key={item.id}
       onClick={() => handleClick(item.id)}
       title={item.name}
       image={item?.image?.original}
-    />
+    /></Link>
   ));
 
   return (
