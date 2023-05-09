@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Box } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -36,9 +37,11 @@ export default function ShowCarouselCard({ title, genres, image, rating, onClick
           fontSize="sm"
           color="white"
           component="div"
+          fontStyle="italic"
         >
           <Genres genres={genres} />
         </Typography>
+        <Box sx={{display:"flex",flexDirection:"row"}}> 
         <Typography
           gutterBottom
           variant="h10"
@@ -46,8 +49,19 @@ export default function ShowCarouselCard({ title, genres, image, rating, onClick
           color="white"
           component="div"
         >
-          <Rating rating={rating} />
+          Rating : &nbsp;
         </Typography>
+        <Typography
+          gutterBottom
+          variant="h10"
+          height={20}
+          color="white"
+          pt={0.5}
+          component="div"
+        >
+          <Rating rating={rating} />
+        </Typography></Box>
+    
       </CardContent>
     </Card>
   );
