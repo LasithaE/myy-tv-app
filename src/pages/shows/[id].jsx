@@ -5,15 +5,13 @@ import Rating from "../../components/Rating";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Provider, useDispatch, useSelector } from "react-redux";
-export default function ShowDetails({ showId }) {
+export default function ShowDetails() {
   const router = useRouter();
   const dispatch = useDispatch();
   const showDetails = useSelector((state) => state.showDetails.showDetails);
-  if (!showId) {
+
     const { id } = router.query;
-  } else {
-    const {id} = {showId}
-  }
+
 
   useEffect(() => {
     dispatch(fetchShowDetails({ id }));
