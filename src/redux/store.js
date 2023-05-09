@@ -9,6 +9,6 @@ export const store = configureStore({
     shows: showsReducer,
     showDetails: showDetailsReducer,
     people: peopleReducer,
-    peopleDetails:peopleDetailsReducer
+    peopleDetails: peopleDetailsReducer,
   },
 });

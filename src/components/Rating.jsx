@@ -17,6 +17,6 @@ function Stars(rating) {
   );
 }
 
-export default function Rating({rating}) {
+export default function Rating({ rating }) {
   return <Stars rating={rating} />;
 }
