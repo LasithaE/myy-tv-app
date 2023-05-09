@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Box } from "@mui/material";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 import ShowCarouselCard from "./ShowCarouselCard";
 import {
   faChevronCircleLeft,
@@ -10,11 +10,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function ShowCarouselComponent({ cards }) {
-  const router = useRouter();
+export default function ShowCarouselComponent({cards}) {
+  const router = useRouter()
   const handleClick = (id) => {
-    router.push(`/shows/${id}`);
-  };
+    router.push(`/shows/${id}`)
+  }
 
   const responsive = {
     superLargeDesktop: {
@@ -23,31 +23,28 @@ export default function ShowCarouselComponent({ cards }) {
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 768, min: 510 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 510, min: 0 },
+      breakpoint: { max: 768, min: 0 },
       items: 1,
     },
   };
 
   const shows = cards.map((item) => (
-    <ShowCarouselCard
+   
+      <ShowCarouselCard
       key={item.id}
-      onClick={() => handleClick(item.id)}
-      title={item.name}
-      genres={item.genres.slice(0, 3)}
-      image={item.image.original}
-      rating={item.rating.average}
-    />
+        onClick={()=>handleClick(item.id)}
+        title={item.name}
+        genres={item.genres.slice(0, 3)}
+        image={item.image.original}
+        rating={item.rating.average}
+      />
   ));
 
   return (
-    <Box className="px-[20%] md:px-[10%]">
+    <Box className="px-[20%]">
       <Carousel
         responsive={responsive}
         customLeftArrow={
@@ -72,3 +69,4 @@ export default function ShowCarouselComponent({ cards }) {
     </Box>
   );
 }
+
