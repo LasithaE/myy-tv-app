@@ -7,9 +7,16 @@ import Typography from "@mui/material/Typography";
 import Rating from "./Rating";
 import { Genres } from "./Genres";
 
-export default function ShowCarouselCard({ title, genres, image, rating, onClick }) {
+export default function ShowCarouselCard({
+  title,
+  genres,
+  image,
+  rating,
+  onClick,
+}) {
   return (
-    <Card onClick={onClick}
+    <Card
+      onClick={onClick}
       sx={{
         margin: 1,
         maxWidth: 300,
@@ -17,7 +24,6 @@ export default function ShowCarouselCard({ title, genres, image, rating, onClick
         color: "transparent",
         backdropFilter: "blur(7px)",
       }}
-     
     >
       <CardMedia sx={{ height: 400 }} image={image} title={title} />
       <CardContent>
@@ -41,27 +47,27 @@ export default function ShowCarouselCard({ title, genres, image, rating, onClick
         >
           <Genres genres={genres} />
         </Typography>
-        <Box sx={{display:"flex",flexDirection:"row"}}> 
-        <Typography
-          gutterBottom
-          variant="h10"
-          height={20}
-          color="white"
-          component="div"
-        >
-          Rating : &nbsp;
-        </Typography>
-        <Typography
-          gutterBottom
-          variant="h10"
-          height={20}
-          color="white"
-          pt={0.5}
-          component="div"
-        >
-          <Rating rating={rating} />
-        </Typography></Box>
-    
+        <Box sx={{ display: "flex", flexDirection: "row" }}>
+          <Typography
+            gutterBottom
+            variant="h10"
+            height={20}
+            color="white"
+            component="div"
+          >
+            Rating : &nbsp;
+          </Typography>
+          <Typography
+            gutterBottom
+            variant="h10"
+            height={20}
+            color="white"
+            pt={0.5}
+            component="div"
+          >
+            <Rating rating={rating} />
+          </Typography>
+        </Box>
       </CardContent>
     </Card>
   );

@@ -14,7 +14,7 @@ export const fetchShowDetails = createAsyncThunk(
     try {
       const response = await axios.get(
         `https://api.tvmaze.com/shows/${showId}`
-      ); 
+      );
       return response.data;
     } catch (error) {
       throw Error(error.message);
