@@ -1,9 +1,9 @@
-import { fetchPeopleDetails } from "@/redux/slices/people/peopleDetailsSlice";
+import { fetchPeopleDetails } from "../../redux/slices/people/peopleDetailsSlice";
 import { Box, Card, Typography, CardMedia } from "@mui/material";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
-export default function ShowDetails() {
+import {  useDispatch, useSelector } from "react-redux";
+export default function PeopleDetails() {
   const router = useRouter();
   const dispatch = useDispatch();
   const peopleDetails = useSelector(
@@ -26,9 +26,8 @@ export default function ShowDetails() {
   useEffect(() => {
     dispatch(fetchPeopleDetails({ id }));
   }, []);
-  console.log("oooooo", peopleDetails);
   return (
-    <Box className="flex items-center pt-[100px] justify-center">
+    <Box data-testid="people-details" className="flex items-center pt-[100px] justify-center">
       <Box sx={{ m: 4, width: 300 }}>
         <Box sx={{ display: "flex", ml: 1, flexDirection: "row" }}>
           <Typography

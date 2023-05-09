@@ -12,11 +12,11 @@ export default function ShowCarouselCard({
   genres,
   image,
   rating,
-  onClick,
 }) {
   return (
     <Card
-      onClick={onClick}
+    data-testid="show-card"
+
       sx={{
         margin: 1,
         maxWidth: 300,
