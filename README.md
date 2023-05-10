@@ -26,7 +26,7 @@ The website was created using the following technologies:
 
 * TVmaze API: An API that provides information about TV shows and people in the TV industry.
 
-* Jest and React Testing Library: Unit testing for Shows, People and Carousel components.
+* Jest and React Testing Library: Unit testing for Shows, People, Carousel, Show Details and People Details components.
 
 ## Installation
 
