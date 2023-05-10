@@ -28,6 +28,8 @@ The website was created using the following technologies:
 
 * Jest and React Testing Library: Unit testing for Shows, People, Carousel, Show Details and People Details components.
 
+## Test Results for tests written in Jest and React Testing Library
+![Screenshot](Screenshot 2023-05-10 at 12.47.03 PM.png)
 ## Installation
 
 To run the website locally, follow these steps:
