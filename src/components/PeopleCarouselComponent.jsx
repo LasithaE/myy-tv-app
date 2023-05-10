@@ -41,7 +41,7 @@ export default function PeopleCarouselComponent({ cards }) {
   ));
 
   return (
-    <Box className="px-[20%] md:px-[10%]">
+    <Box className="px-[20%] md:px-[10%]"data-testid="people-carousel">
       <Carousel
         responsive={responsive}
         customLeftArrow={

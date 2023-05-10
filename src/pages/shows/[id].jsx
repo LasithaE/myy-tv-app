@@ -46,7 +46,7 @@ export default function ShowDetails() {
           <CardMedia
             sx={{ height: 400, width: 300 }}
             image={showDetails?.image?.original || "/public/assets/sample.png"}
-            title={showDetails?.title}
+            title={showDetails?.name}
           />
         </Card>
         <Box>

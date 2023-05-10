@@ -57,7 +57,6 @@ export default function ShowCarouselComponent({ cards }) {
             className="absolute top-1/2 left-4 max-w-4 cursor-pointer text-primary-400"
           />
         }
-        data-testid="shows-list"
         customRightArrow={
           <FontAwesomeIcon
             icon={faChevronCircleRight}
