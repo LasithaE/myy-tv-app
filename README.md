@@ -29,8 +29,8 @@ The website was created using the following technologies:
 * Jest and React Testing Library: Unit testing for Shows, People, Carousel, Show Details and People Details components.
 
 ## Test Results for tests written in Jest and React Testing Library
+<img width="439" alt="testresults" src="https://github.com/LasithaE/myy-tv-app/assets/62329100/332b336f-f58a-4a03-a923-363512ae811b">
 
-![Test Results](testresults.png)
 
 ## Installation
 
